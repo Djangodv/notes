@@ -26,6 +26,7 @@ git config --global init.defaultBranch master: suppress warning about 'master' a
 git remote add orgin 'link': 
 git branch -M 'name': rename branch to specified name
 git push -u orgin 'branch name': ? 
+git push -f orgin 'branch name': force push to branch
 
 git config -l: list 
 git config --global user.email "email": set email 
@@ -39,5 +40,6 @@ git config pull.rebase false: default configuration when pulling from github
 
 Merging is a preserves the entire history of your repository
 
-git clone 'link': 
+git clone 'link': clone a repository into a directory
+git pull orgin 'main': update local repository
 git ls-files: list all files on github repository
