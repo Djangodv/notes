@@ -40,3 +40,4 @@ git config pull.rebase false: default configuration when pulling from github
 Merging is a preserves the entire history of your repository
 
 git clone 'link': 
+git ls-files: list all files on github repository
