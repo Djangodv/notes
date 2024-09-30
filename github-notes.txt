@@ -44,4 +44,4 @@ git clone 'link': clone a repository into a directory
 git pull orgin 'main': update local repository
 git ls-files: list all files on github repository
 
-hello
+git commit -a: automatically stage modified or deleted files expect newly created files
