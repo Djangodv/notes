@@ -45,3 +45,5 @@ git pull orgin 'main': update local repository
 git ls-files: list all files on github repository
 
 git commit -a: automatically stage modified or deleted files expect newly created files
+
+git status: show whether files are out of sync or not
