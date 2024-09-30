@@ -1,0 +1,42 @@
+Each repository has on default branch, and can have multiple other branches
+
+Other branches are new/seperate versions of the main repository
+
+Default branch name is 'master'
+
+git init: initialize a git repository in root folder
+git status: show status of git
+
+A commit is record of what changes you have made since the last time 
+Staging area: file that stores information about what will go into you next commit
+
+git add 'file': add specified file to staging area 
+git add .: add all files to staging area
+git rm 'file': remove specified file from working tree and index
+
+git commit: creates a commit
+git commit -m 'message': create a commit with added message
+
+In order to delete a git repository delete the .git
+
+git log: log of all saved changes
+
+git config --global init.defaultBranch master: suppress warning about 'master' as the initial branch name
+
+git remote add orgin 'link': 
+git branch -M 'name': rename branch to specified name
+git push -u orgin 'branch name': ? 
+
+git config -l: list 
+git config --global user.email "email": set email 
+git config --global user.name "name": set username 
+
+ssh-keygen -t ed25519: generate SSH key on computer with the ED25519 cryptographic algorithm(-t type)
+
+In order to setup a GitHub SSH connection use the generated SSH key 
+
+git config pull.rebase false: default configuration when pulling from github
+
+Merging is a preserves the entire history of your repository
+
+git clone 'link': 

@@ -1,0 +1,1 @@
+:sh/term: open terminal
