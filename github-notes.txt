@@ -47,3 +47,7 @@ git ls-files: list all files on github repository
 git commit -a: automatically stage modified or deleted files expect newly created files
 
 git status: show whether files are out of sync or not
+
+When cloning a github repo to a local machine use:
+git clone 'link'
+git push origin main
