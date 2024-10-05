@@ -1,0 +1,183 @@
+--- Shortcuts ---
+i: insert, esc: command, v: visual, r: replace
+numero: multiply executed command
+:help: get help
+:sh/term: open terminal
+
+ctrl-f: page down, ctrl-b: page up
+w: move to start of the next word, b: move to start of the previous word
+e: move to end of word, ge: move to end of previous word
+0: start of line, $: end of line
+
+x: reversed backspace, X: backspace
+a: append, A: insert end of line
+d: delete, dw: delete word, dd: delete line, diw: delete whole word
+d0: delete to begin, d$: delete to end
+o: new line below, O: new line above
+s: delete and insert char, S: delete and insert line
+cw: change word, ciw: change whole word
+r: replace char, R: replace 
+
+yy: copy current line, yw: copy word, y0: copy to begin, y$: copy to end
+p: paste below current line, P: paste above current line
+u: undo, U: undo whole line, ctrl-r: redo 
+
+.: repeat last used keyboard combination(command)
+@colon: repeat last colon command
+
+f: find char in line or document,(; & ,): back or forward, F: find backwards
+/: find specified text,(n & N): next or previous, ?: find specified text backwards
+%: jump to matching ), ] or } 
+"page number" G: go to specified page
+
+:s/old/new: change old to new in line, :s/old/new/g(global): change every occurrence in line
+:%s/old/new/g: change every occurrence in file
+:1,5s/old/new: changes every occurrence of old from line 1 to 5
+
+:! "command": use command outside of vim
+:e "file": open and edit specified file
+:new "file": opens specified file in new window, 
+:noh: no highlighting, :set nohlsearch: turns off highlighting temporarily
+ZZ: write and exit file
+
+:set number: show line numbers
+:"line", "line"gg, "line"G: jump to specified line
+
+J: join line below cursor with end of current line
+W, E, B: ignore special characters when navigating words
+H: move cursor to top part, M: move to middle part, L: move to last part 
+ctrl-D: half a page down, ctrl-U: half a page up 
+ctrl-E: scroll one line down, ctrl-Y: scroll one line up  
+
+:set ignorecase: ignore distinction between upper and lower case letters when searching
+usr/share/vim/vim90/vimrc_example: example of .vimrc file 
+set: "command"(.vimrc): sets commands default value in vim
+:syntax enable: enables syntax colors
+:set background=dark, light: set different background colors
+:colorscheme "color": change colors of syntax highlighting, /vimruntime/colors: location of all available color schemes
+
+V: select whole lines in visual mode, Vo: switch to other end of selection
+ctrl-v: visual block mode, I"text"[esc]: insert text in first part of selected block
+$A"text"[esc]: insert text after lines of selected block(c: change, r:
+replace, J: join )
+D: delete to end of line(d$), C: change to end of line(c$)
+ciw: change whole word(i stands for inner) 
+caw: change whole world including preceding whitespace(a stands for a; a word)
+
+set autoindent: indent automatically when previous line has an indent
+set ruler: diplay current cursor position
+set showcmd: show commands in right corner
+:set incsearch: search keyword while typing when using the / command
+:options: list options
+
+:set "option&": reset specified option to default value
+:set nowrap: disables lines continuing on new line in a bordered window
+:set list: show end of line with $
+:set textwidth=0: stops lines getting broken off to next line
+
+map "key combination" "commands": maps specified key to a certain command
+map <Leader> "command": string value that defaults to backslash and can be changed to any other key
+let mapleader = "", g:mapleader = ""(vim9 script): changes <Leader> key
+:help map-which-keys: show unmapped keys
+:map: list current mappings
+
+:set filetype: show filetype of file in use
+
+:next, :n: next file in sequence, :N, :previous: previous file 
+:wnext: save file before moving to next file
+:args, :arg, :ar: show/change files
+
+:split "filename": split screen between two filse, :only: closes all windows except focused window
+:vsplit, vs: split windows vertically(vnew), 
+ctrl-w (h, j, k, l): change active window in specified direction, (t, b): top & bottom
+ctrl-w (H, J, K, L): change window position
+:wall, :qall, :wqall: write quit all 
+vi -o "files": open every file in seperate horizontal window
+vi -O "files": open every file in seperate vertical window
+:all, vertical all: open all files in ar list in seperate windows(horizontal, vertical)
+
+:tabedit "filename": opens specified file in another tab
+gt: switch tabs, :tabonly: closes all tab pages except focused tab 
+:"command" tab: autocomplete([enter], [space]: select/execute value)
+:"command" ctrl-d: show all available autocomplete options
+: ctrl-p: enter previously executed command from history, ctrl-n: next
+q: :show history of colon commands in normal mode(allows changing commands)
+
+:he "command": find abbreviations
+
+view "file": open file in read-only mode
+:saveas "name": save file as "name"
+
+.: current line, +: lines down, -: lines up, 5:: use command on :.,.+
+gq: format operator; 
+g + ctrl-G: show lines words & bytes(works with visual mode)
+K: show documentation of word on cursor
+:%s/\s\+$//: remove all whitespaces at en of line
+
+ctrl-b: start of command, ctrl-e: end of command 
+ctrl-w: delete whole word in command, ctrl-u: removes all text in command line 
+ctrl-c: cancel command(esc)
+
+:edit .: view contents of current directory
+:cd, :pwd: same as linux
+
+vi -x "file": encrypt files 
+ctrl-w (insert mode): delete word before cursor
+ctrl-u (^): delete line before cursor
+ctrl-p: autocomplete from file 
+ctrl-x ctrl-l: complete whole line
+ctrl-a: repeat last insertion
+ctrl-y: insert character above cursor, ctrl-e: insert character below the cursor
+ctrl-o "command": execute normal mode commands in insert mode
+ctrl-k "digraph": type special character
+:digraphs: list all digraphs
+
+:iabbrev, :iab "text" "text": abbreviates text
+:abbreviate: list abbreviations, unabbreviate "text": deletes abbreviations
+
+:set showmatch: briefly move cursor to matching curly bracket
+
+chapter 5.4: installing plugins
+chapter 5.6: useful vim options
+chapter 6.3: customize syntax colors
+chapter 10.1: using registers with q and "
+chapter 10.4: the global command
+chapter 10.6: reading and writing to file
+chapter 10.9: using an external program
+chapter 11.*: recovering from a crash
+chapter 12.*: advanced wizardry
+chapter 12.6: documentation inside vim 
+chapter 20.3: command line autocompletion
+chapter 23.4: binary files
+
+
+                                                                                             |
+ |tab| |q|         |w|         |e|            |r|        |t|      |y|       |u|      |i|              |o|        |p|        |[| |]|                                       |
+                start of-    end of-        replace      to*       yank      undo    insert          new line    paste     |
+                  word        word                                                                              |
+                                                                                             |
+                                                                                                                         |
+                                                                                                |
+                                                                                                |
+                                                                                                 |
+ |caps| |a|             |s|               |d| |f| |g| |h| |j| |k| |k| |l| |;| |'|
+       append          substitute                                                                                 |
+
+
+
+
+
+
+
+
+
+
+
+capslock/t/tab/diw->dw/
+
+
+
+moving selected lines
+multiple windows within vim
+auto move out of quotes, {, [ and (
+remapping existing command shortcuts

@@ -1,0 +1,195 @@
+manual:
+foo: package name
+apt: chapter 8.1.2
+dpkg: ~chapter 8.3
+check debian system base: manual?
+
+command line:
+pwd: current directory
+ls: list files and directories
+cd: change directory (.. = parent)(./ = current)
+cd: changes to home directory (/home/user)
+cd -: previous directory
+ls -l: added details, ls -t: sort by time, ls -a: list all files(hidden), 
+ls -s: size, ls -sh: human readable, ls -S: sort by file size
+file: file information
+
+cp -r: copies files from directory to directory
+cp -a: copies files from directory to directory among other things(symlinks, permissions, ownership)
+cp -v: show results, cp -r dir/* dir: only copies files in directory
+cp -u: only copies new files
+
+less: text viewer, q: quit
+
+reset: heplful command?
+
+usr/share/doc: program documentation files
+mkdir: creates directories, cp: copy file to location
+mv file1 file2: overwrites or creates file2, mv file1 directory/..: move to directory
+rm: delete function, rm -r: delete directories, rm -i: conformation
+ln: create hard link(shortcut), ln -s: create symbolic link
+
+type: identifies type of command(executable program, shell command, shell function, alias)
+which: displays location
+help command: shell commands, command --help: executable program
+man: show manual for commands, apropos: search manuals for keyword, whatis: name + one-line description, info: -
+alias name='command': creates an command alias(combine commands)
+
+redirecting command output/input & manipulating file output : chapter 6
+cat file: copy file content to standard output(terminal output)
+cat > file, enter, ctrl-d: send input to specified file
+
+*: matches any character(wildcard), x*y: first letter/last letter
+
+clear: clears terminal window
+ctrl-a/ctrl-b: move to beginning/end of line, alt-f/ctrl-b: foward/back
+ctrl-k/ctrl-u: kill end/beginning of line
+ctrl-y: yank(paste)
+tab: the holy grail shortcut, 2*tab: show list of autocompletion
+history: shows histroy of executed commands, ctrl-r: search in history, ctrl-r: next result, ctrl-g: cancel
+!!: repeat last command
+
+permissions: chapter 9
+type sudo: bash: sudo: command not found
+
+ps: show computer processes, ps x: show more computer processes, ps -e: show all computer processes 
+STAT R/S: running/sleeping
+aux: show detailed list of processes(memory/cpu perc)
+top: show even more computer processes in detailed view, q: quit, h: help
+ctrl-c: politely ask a program to terminate, ctrl-z: stop terminal process
+program &: open program outside of terminal/in background
+fg %1: move process 1 to foreground, bg %2: move process to background
+pgrep "name": show PID of specified application
+
+kill pid (-15/TERMinate): terminates a process, killall "name": terminates all
+
+poweroff: shutdown system, reboot: reboots system
+
+networks: chapter 16
+ip: show network information
+
+iwconfig, ip a, ip link: show network devices
+
+customizing terminal(creating a clock in terminal window): chapter 13
+
+dnf search: searches for a specified package, dnf install: installs package, dnf remove: removes packages
+dnf update: updates packages(doesn't remove older versions -> safer) 
+dnf upgrade: upgrades packages(doest remove older versions -> less safe, but more efficient)
+dnf autoremove: removes unused dependencies, dnf check-update: checks for updates without installing them
+dnf info "name": information about specified package
+dnf reinstall: reinstalls packages
+dnf -h, --help: help page
+dnf list: list packages
+
+nmcli: show general network/device informaton
+nmcli radio(r): show wifi connection enabled or disabled
+nmcli r all/wifi/wwan on/off: turn wifi on/off
+nmcli d: show devices status
+nmcli d wifi (list): show availabe wifi networks
+nmcli -a d wifi connect ssid: connect to specified wifi network(ssid)
+
+bluetoothctl --help(any command): run commands outside interactive mode
+bluetoothctl: opens bluetoothctl interactive mode, list: controllers, show: show controller(receiver) information
+scan on/off: turn scanning on/off, devices: show available devices
+devices Paired/Bonded/Trusted/Connected: list (...) devices
+trust "MAC address": trusts devices for auto connections
+
+"command" > file.txt: uses redirection operator to store output in a text file
+nano file.txt: opens specified file in nano(text editor)
+> file.txt: creates or overwrites a file
+"command" >> file.txt: appends output to specified file
+&>: redirects boths standard output and error
+/dev/null: bit bucket(lava pit)
+redirection operator connects command with file 
+pipeline operator connects output of one command with input of another
+
+"command" | less: sends output of specified command to less(useful when viewing long output lists)
+"command" | uniq | less: remove duplicates from output
+wc "file": prints lines, words, bytes
+"command" | grep "search term(pattern)" prints line containing the pattern useful when searching stuff
+
+less file.txt: opens a file with less
+b: previous page, space: next page, G/g: move to end/begin of text file
+/"keyword": searches for specified keyword, n: next occurrence of keyword, q: quit
+
+tail "file": prints last 10 lines of a file
+tail -f "file": monitors last 10 lines of file in real time, ctrl-c: stops process
+tail -f /var/log/messages: shows what the system is doing in real time
+
+mount, findmnt: ?
+
+lsusb: list connected usb devices, lsblk: list all storage devices, 
+lsblk -p: show path files, sudo fdisk -l: list disk partition table
+tail -f /var/log/messages: can be used to detect umounted disks
+umount "path": unmounts specified path, mount "path" "path": mounts drive to specfied path
+df: show space usage
+
+fdisk "drive/path": interact with drives at low level, p: print partition table
+q: quit without saving changes, w: write changes, d: delete partition, n: add new partition
+mkfs "drive path"": change and format drive to ext2
+mkfs -t ext4 "drive path": change and format drive to ext4
+mkfs -t vfat "drive path": change and format drive to fat32
+fsck: linux joke and tool to repair corrupt file system
+
+firefox "file": opens specified file in firefox(pdf)
+nohup "program": restricts terminal input/output signals of specified program
+nohup "program" &: restricts terminal input/output signals and opens program in the background
+
+echo: displays a line of text 
+
+usermod: modify user accounts, usermod -d "path" "user": change default directory of specified user 
+passwd "username": change specified user password, sudo passwd root: give root password and make accessible
+sudo passwd -l root: disable root access/lock password, sudo passwd -u root: unlock password/access 
+id: show user IDs, su: login as root, su -l: changes working directory, exit: logout
+whoami: show active user
+
+sudo updatedb:create/updates database(collection of data, typically stored in a computer) used by the locate command
+locate "filename": locates files, find "keyword": searches system for specified keyword(more elaborate)
+find "keyword" -type d: find directory, find "keyword" -type f: find regular file, find "keyword" -type l: find symbolic link
+xargs: makes commands execute more efficiently by using multiple processes 
+
+zip -r "name.zip" "file": compress specified file in zip format(-r for directories)
+unzip "name.zip": unzips file in current directory, unzip "name.zip" -d "directory": unzips in specified directory
+unzip -l "name.zip": lists files in name.zip without extracting
+
+rsync -r "path" "path": copy files from path to path(-r for subdirectories)(cp -u does the same thing)
+ 
+function "name"() { "command" "$@" }: creates a function(executable command) that takes parameters("$@": all, "$1", "$2": individual)
+.bashrc: automatically executed script file to customize cli(file to write custom command as specified above)
+
+lspci -v: detailed list of connected PCI devices and their drivers
+modinfo "driver": list driver information
+
+regular expressions(regex): expressions to search matching patterns in text(expression: values that must be calculated to be resolved)
+
+grep [option] "keyword" [file]: grep usage("keyword" can also contain a regular expression e.g. [A-G] or .)
+grep "keyword": prints line containing "keyword"(grep searches for patterns), dnf list installed | grep "keyword": uses grep to search for matching keywords
+grep -i "keyword": doesn't distinguish between upper and lowercase characters, grep -v: only prints non-matches, grep -c: print number of matches
+grep -l: prints filename of match instead of line with match
+
+touch "filename": creates an empty new file, > "filename": same
+
+chmod: change permissions of a file, rwx: read-write-execute, ugoa: user-group-other-all(default)
+chmod +x "filename": add executable permission to specified filename
+umask: change default permission when creating files, default umask: 0022
+
+server setup:
+sudo apt install openssh-server: install openssh
+systemctl status sshd: show openssh status
+ip a: list ip private address
+ssh 'inet ip': connect to linux pc
+id: show root privileges
+who -a: show all connected users
+lastlog/journalctl -u ssh: show logs
+
+/etc/ssh/sshd_config: change ssh config file:
+#PermitRootLogin = PermitRootLogin no
+#PasswordAuthentication = PasswordAuthentication no
+
+sudo ufw status(verbose): show status
+sudo ufw enable/disable: enable/disable ufw
+
+scp "file name" user@hostname:file location
+scp id_rsa.pub user@192.168.1.115:.ssh\authorized_keys
+
+
