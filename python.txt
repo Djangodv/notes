@@ -1,8 +1,41 @@
 input() function: returns a string
-int(input()): returns an integer
+int(input()): convert input to integer
 
 += operations are also required when working with strings
 
 r"string": raw string ignores \n
 
 import "file": import specified python file to run inside current file
+
+len(string): gives the length of 'string'
+string1 in string2: checks whether character in 'string1' are present in 'string2'
+string.replace("char1", "char2"): replaces 'char1' with 'char2' in string
+
+random.randint(1, 5): gives a random integer between 1 and 5
+
+f"Hello, {name}": f-string
+
++=, -=, *=, /=:
+string.alpha(): returns true if all character are alphabet letters
+
+file.readlines(): returns a list with all lines in specified file
+
+list.index(1): returns index of the first position of specfied value(1) 
+string.split("char"): split items in string into list 
+
+dictionary["year"] = 2018: change or append to specified dictionary
+dictionary.update(key: value): update(change/append) dictionary
+dictionary.get(key): returns the value associated with key
+
+with open("file", "mode") as keyword: open specified file as keyword
+with ensures closing resources right after using them
+
+file = open("file", "mode"): opens a file
+file.close(): closes a file
+file.read(): reads from file
+file.write(""): write to file
+
+try: #test the indented block of code for an error
+  print(x)
+except: #if an error occurs print statement underneath
+  print("An exception occurred") 

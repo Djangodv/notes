@@ -1,0 +1,11 @@
+ASCII: uses 1 byte (8 bits) encoding and maps every character to a different byte
+ord('char'): returns ASCII code of specified character
+chr('ASCII code'): returns corresponding character of specified ASCII code
+
+Namespace: declarative region that provides a scope to identifiers e.g. variables or functions
+Global scope: entire file
+Local scope: e.g. inside a function
+
+Syntax error: occurs when the computer can't read the code, because it's not valid
+
+Exception error: occurs during the execution of the program and inerrupt the execution of a program

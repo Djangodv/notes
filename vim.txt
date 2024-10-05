@@ -17,6 +17,7 @@ o: new line below, O: new line above
 s: delete and insert char, S: delete and insert line
 cw: change word, ciw: change whole word
 r: replace char, R: replace 
+d, jk: delete line including the one above or below
 
 yy: copy current line, yw: copy word, y0: copy to begin, y$: copy to end
 p: paste below current line, P: paste above current line

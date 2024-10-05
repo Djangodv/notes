@@ -2,7 +2,7 @@ Each repository has on default branch, and can have multiple other branches
 
 Other branches are new/seperate versions of the main repository
 
-Default branch name is 'master'
+Default branch name is 'main'
 
 git init: initialize a git repository in root folder
 git status: show status of git
