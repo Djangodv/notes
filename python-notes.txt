@@ -2,3 +2,5 @@ input() function: returns a string
 int(input()): returns an integer
 
 += operations are also required when working with strings
+
+r"string": raw string ignores \n
