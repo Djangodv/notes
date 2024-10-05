@@ -2,3 +2,4 @@
 :w 'filename': rename current file to specified filename
 
 ctrl-p: open specified files inside vscode
+ctrl-r: redo changes

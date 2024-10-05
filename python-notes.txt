@@ -4,3 +4,5 @@ int(input()): returns an integer
 += operations are also required when working with strings
 
 r"string": raw string ignores \n
+
+import "file": import specified python file to run inside current file
