@@ -8,6 +8,7 @@ ctrl-f: page down, ctrl-b: page up
 w: move to start of the next word, b: move to start of the previous word
 e: move to end of word, ge: move to end of previous word
 0: start of line, $: end of line
+ctrl-o: move to previous cursor position, ctrl-i: move to newer one
 
 x: reversed backspace, X: backspace
 a: append, A: insert end of line
@@ -18,6 +19,8 @@ s: delete and insert char, S: delete and insert line
 cw: change word, ciw: change whole word
 r: replace char, R: replace 
 d, jk: delete line including the one above or below
+dib: delete inner block, yib: yank inner block
+2i: open two line to edit simultaneously
 
 yy: copy current line, yw: copy word, y0: copy to begin, y$: copy to end
 p: paste below current line, P: paste above current line
