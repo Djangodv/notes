@@ -1,0 +1,13 @@
+Nodes: fundamental components to build a game
+Scene: a construct comprised of a tree of (multiple) nodes
+
+f: center viewpoint in scene view
+
+func _init(): function called when class of a node is created 
+(_ready() is called when a node including all it's children is ready)
+
+_process() is called every frame
+delta: amount of time elapsed since last frame
+
+Vector2: a variable with two values usually an x and y values
+For example: var temp = Vector2(50, 80)
