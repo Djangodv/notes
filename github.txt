@@ -51,3 +51,5 @@ git status: show whether files are out of sync or not
 When cloning a github repo to a local machine use:
 git clone 'link'
 git push origin main
+
+First commit needs a whole message like so: git commit -m "First commit"?
