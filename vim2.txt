@@ -1,0 +1,34 @@
+A makefile is a script that describes the compiling process
+
+:make: execute make command
+:set makeprg=: set make program
+
+#Use ctrl-tab to switch currently opened files
+
+:tabs: show vim tabs
+:tabnew 'file': open specified file in new tab
+:0tabmove: move current tab to first position in tabpage
+
+:term: open terminal in vim (useful with git)
+
+:w /path/to/file.txt: write file to specified path
+
+:help 'text-objects': text selection only usable in Visual mode or after an operator
+diw: delete inner word
+daw: delete a word
+
+:ab: show all abbreviations
+:ab 'teh' 'the': use abbreviations to make 'teh' 'the'
+:iab: only abbreviate in insert mode
+-<CR>: add a new line inside :ab
+
+
+:filetype on: enable filetypes (e.g. when using autocmd)
+:filetype: show filetype configuration settings
+
+:E (netrw)
+-mb: add directory to bookmarks
+-qb: list bookmarks
+-'bookmark'gb: go to marked directory
+
+
