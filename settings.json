@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.focusAfterRun": "terminal",
+    "editor.tabCompletion": "on",
+    "vim.handleKeys": {
+        "<C-b>": false,
+    }
+}
