@@ -8,7 +8,8 @@ Github is a 'host' that hosts Git remotely.
 
 `git config -l`: list configurations
 
-`git config --global user.email "email"`: set email \ 
+`git config --global user.email "email"`: set email
+
 `git config --global user.name "name"`: set username 
 
 `git config --global init.defaultBranch master`: suppress warning about 'master' as the initial branch name
@@ -26,17 +27,22 @@ In order to delete a git repository delete the .git.
 A commit is record of what changes you have made since the last time.
 
 `git add 'file'`: add specified file to staging area 
+
 `git add .`: add all files to staging area (expect deletions?)
+
 `git add -A`: stage all changes including deletions
 >The staging area stores information about what will go into your next commit
 
 `git restore`: remove staged files from staging area
 
 `git commit -m 'message'`: save staging area to local repo
+
 `git commit -a`: automatically stage modified or deleted files expect newly created files
 
 `git push -u origin main`: push commits to linked remote repo
+
 `-u`: sets default remote branch for current local branch
+
 `git push -f orgin 'branch name'`: force push to branch
 
 `git pull orgin 'main'`: pull changes to local repository
@@ -49,7 +55,9 @@ Merge conflicts occur when files have already been changed when pulling/pushing.
 ## Repositories
 
 `git log`: log of commit history
+
 `git log --all --graph`: show commit history in graph form
+
 `git ls-files`: list all files on github repository
 
 Forking a repository trough github creates an unlinked copy meaning it's changes will never affect the main repository.
