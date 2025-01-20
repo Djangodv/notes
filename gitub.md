@@ -1,7 +1,7 @@
 A Version Control System (VSC) saves changes to a file locally or remotely (e.g. Git).
 Github is a 'host' that hosts Git remotely.
 
-Github setup
+## Github setup
 
 ssh-keygen -t ed25519: generate SSH key on your computer with the ED25519 cryptographic algorithm(-t type)
 Use the generated public key in 'SSH keys' on Github
@@ -15,7 +15,8 @@ git config --global init.defaultBranch master: suppress warning about 'master' a
 
 ---
 
-Repository setup:
+## Repository setup
+
 The easiest way to setup a repository on Github is cloning it locally
 
 git clone 'link': creates a linked copy by cloning a repository into a directory
