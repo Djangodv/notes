@@ -3,7 +3,7 @@ Github is a 'host' that hosts Git remotely.
 
 ## Github setup
 
-`ssh-keygen -t ed25519`: generate an SSH key on your computer with the ED25519 cryptographic algorithm(-t type);
+`ssh-keygen -t ed25519`: generate an SSH key on your computer with the ED25519 cryptographic algorithm(-t type)
 >Use the generated public key in 'SSH keys' on Github
 
 `git config -l`: list configurations
@@ -15,20 +15,20 @@ Github is a 'host' that hosts Git remotely.
 
 ## Repository setup
 
-The easiest way to setup a repository on Github is cloning it locally
+The easiest way to setup a repository on Github is cloning it locally.
 
 `git clone 'link'`: creates a linked copy by cloning a repository into a directory
 
-In order to delete a git repository delete the .git
+In order to delete a git repository delete the .git.
 
 ## Commits
 
-A commit is record of what changes you have made since the last time 
-Staging area: file that stores information about what will go into you next commit
+A commit is record of what changes you have made since the last time.
 
 `git add 'file'`: add specified file to staging area 
 `git add .`: add all files to staging area (expect deletions?)
 `git add -A`: stage all changes including deletions
+>The staging area stores information about what will go into your next commit
 
 `git restore`: remove staged files from staging area
 
@@ -44,7 +44,7 @@ Staging area: file that stores information about what will go into you next comm
 
 `git status`: shows files that are out of sync
 
-Merge conflicts occur when files have already been changed when pulling/pushing
+Merge conflicts occur when files have already been changed when pulling/pushing.
 
 ## Repositories
 
@@ -52,7 +52,7 @@ Merge conflicts occur when files have already been changed when pulling/pushing
 `git log --all --graph`: show commit history in graph form
 `git ls-files`: list all files on github repository
 
-Forking a repository trough github creates an unlinked copy meaning it's changes will never affect the main repository
+Forking a repository trough github creates an unlinked copy meaning it's changes will never affect the main repository.
 
 ## Branches
 
@@ -64,7 +64,7 @@ Each repository has one default branch (e.g. main) from which other branches are
 
 `git branch -M 'name'`: rename branch to specified name
 
-Merging combines the changes from one branch into the main branch
+Merging combines the changes from one branch into the main branch.
 
 `git merge "branch"`: merges "branch" into current branch
 
