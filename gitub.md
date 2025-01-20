@@ -3,35 +3,34 @@ Github is a 'host' that hosts Git remotely.
 
 ## Github setup
 
-Generate an SSH key on your computer with the ED25519 cryptographic algorithm(-t type);
-ssh-keygen -t ed25519: 
-Use the generated public key in 'SSH keys' on Github
+`ssh-keygen -t ed25519`: generate an SSH key on your computer with the ED25519 cryptographic algorithm(-t type);
+>Use the generated public key in 'SSH keys' on Github
 
 `git config -l`: list configurations
 
-git config --global user.email "email": set email 
-git config --global user.name "name": set username 
+`git config --global user.email "email"`: set email 
+`git config --global user.name "name"`: set username 
 
-git config --global init.defaultBranch master: suppress warning about 'master' as the initial branch name
+`git config --global init.defaultBranch master`: suppress warning about 'master' as the initial branch name
 
 ## Repository setup
 
 The easiest way to setup a repository on Github is cloning it locally
 
-git clone 'link': creates a linked copy by cloning a repository into a directory
+`git clone 'link'`: creates a linked copy by cloning a repository into a directory
 
 In order to delete a git repository delete the .git
 
----
+## Commits
 
 A commit is record of what changes you have made since the last time 
 Staging area: file that stores information about what will go into you next commit
 
-git add 'file': add specified file to staging area 
-git add .: add all files to staging area (expect deletions?)
-git add -A: stage all changes including deletions
+`git add 'file'`: add specified file to staging area 
+`git add .`: add all files to staging area (expect deletions?)
+`git add -A`: stage all changes including deletions
 
-git restore: remove staged files from staging area
+`git restore`: remove staged files from staging area
 
 git commit -m 'message': save staging area to local repo
 git commit -a: automatically stage modified or deleted files expect newly created files
