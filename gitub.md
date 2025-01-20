@@ -32,48 +32,41 @@ Staging area: file that stores information about what will go into you next comm
 
 `git restore`: remove staged files from staging area
 
-git commit -m 'message': save staging area to local repo
-git commit -a: automatically stage modified or deleted files expect newly created files
+`git commit -m 'message'`: save staging area to local repo
+`git commit -a`: automatically stage modified or deleted files expect newly created files
 
-git push -u origin main: push commits to linked remote repo
--u: sets default remote branch for current local branch
-git push -f orgin 'branch name': force push to branch
+`git push -u origin main`: push commits to linked remote repo
+`-u`: sets default remote branch for current local branch
+`git push -f orgin 'branch name'`: force push to branch
 
-git pull orgin 'main': pull changes to local repository
-#If git pull is used in a branch only changes from that specific branch are pulled
-^?
+`git pull orgin 'main'`: pull changes to local repository
+>If git pull is used in a branch only changes from that specific branch are pulled
+
+`git status`: shows files that are out of sync
 
 Merge conflicts occur when files have already been changed when pulling/pushing
 
----
+## Repositories
 
-Status/logging changes
-git log: log of all saved changes
-git ls-files: list all files on github repository
-git log --all --graph: show commit histroy in graph form
-git status: shows files that are out of sync
+`git log`: log of commit history
+`git log --all --graph`: show commit history in graph form
+`git ls-files`: list all files on github repository
 
----
+Forking a repository trough github creates an unlinked copy meaning it's changes will never affect the main repository
 
-Other:
-
-Forking a repo trough github creates an unlinked copy meaning it's changes will never affect the main repo
-
----
-
-Branching:
+## Branches
 
 A branch is an unlinked copy of the main repository.
 Each repository has one default branch (e.g. main) from which other branches are created. 
 
-git checkout -b "name": create a new branch and automatically switch to it
-git checkout "name": switch to branch "name"
+`git checkout -b "name"`: create a new branch and automatically switch to it
+`git checkout "name"`: switch to branch "name"
 
-git branch -M 'name': rename branch to specified name
+`git branch -M 'name'`: rename branch to specified name
 
 Merging combines the changes from one branch into the main branch
 
-git merge "branch": merges "branch" into current branch
+`git merge "branch"`: merges "branch" into current branch
 
 A common branching strategy is:
 1. main branch stores the original code for a project's codebase (e.g. release)
