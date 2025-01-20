@@ -8,7 +8,7 @@ Github is a 'host' that hosts Git remotely.
 
 `git config -l`: list configurations
 
-`git config --global user.email "email"`: set email 
+`git config --global user.email "email"`: set email\ 
 `git config --global user.name "name"`: set username 
 
 `git config --global init.defaultBranch master`: suppress warning about 'master' as the initial branch name
