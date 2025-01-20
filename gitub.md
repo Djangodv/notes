@@ -1,4 +1,4 @@
-A Version Control System (VSC) saves changes to a file locally or remotely (e.g. Git).
+A Version Control System (VSC) saves changes to a file locally or remotely (e.g. Git).\
 Github is a 'host' that hosts Git remotely.
 
 ## Github setup
