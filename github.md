@@ -103,7 +103,7 @@ Create a 'config' file in the .ssh folder containing the following:
         User git
         IdentityFile C:\Users\User\.ssh\id_ed25519_school
 
-`git clone git@github.com-school:example/school.git`: using git@github.com-school to clone repository specific to that account
+`git clone git@github.com-school:example/school.git`: using github.com-school to clone repository specific to that account
 
 `git config user.email "email"`: change email used for commits per repository
 
