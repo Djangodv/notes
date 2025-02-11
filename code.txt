@@ -9,5 +9,3 @@ Local scope: e.g. inside a function
 Syntax error: occurs when the computer can't read the code, because it's not valid
 
 Exception error: occurs during the execution of the program and inerrupt the execution of a program
-
-Hello this a test!
