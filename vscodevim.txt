@@ -3,3 +3,5 @@
 
 ctrl-p: open specified files inside vscode
 ctrl-r: redo changes
+
+ctrl-shift-v: open preview of markdown files in new window

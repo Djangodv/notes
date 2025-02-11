@@ -6,11 +6,13 @@ Github is a 'host' that hosts Git remotely.
 `ssh-keygen -t ed25519`: generate an SSH key on your computer with the ED25519 cryptographic algorithm(-t type)
 >Use the generated public key in 'SSH keys' on Github
 
-`git config -l`: list configurations
+`git config -l`: list all configurations
 
-`git config --global user.email "email"`: set email
+`git config user.email`: list user.email in config file (email used locally)
 
-`git config --global user.name "name"`: set username 
+`git config --global user.email "email"`: set global email
+
+`git config --global user.name "name"`: set global username 
 
 `git config --global init.defaultBranch master`: suppress warning about 'master' as the initial branch name
 
@@ -80,3 +82,28 @@ A common branching strategy is:
 1. main branch stores the original code for a project's codebase (e.g. release)
 2. development branch where completed code is staged before release
 3. new branches are created from the development branch for each new feature
+
+## Multiple accounts
+
+`ssh-keygen -t ed25519 -C "email"`: generate an SSH key with -C option meaning comment
+
+`ssh-add C:\Users\User\.ssh\id_ed25519.pub`: add SSH key to ssh-agent
+>Useful when using passphrases so you only have to type the passphrase once
+
+Create a 'config' file in the .ssh folder containing the following:
+
+    #Default Github
+    Host github.com
+        HostName github.com
+        User git
+        IdentityFile C:\Users\User\.ssh\id_ed25519
+
+    Host github.com-school
+        HostName github.com
+        User git
+        IdentityFile C:\Users\User\.ssh\id_ed25519_school
+
+`git clone git@github.com-school:example/school.git`: using git@github.com-school to clone repository specific to that account
+
+`git config user.email "email"`: change email used for commits per repository
+
