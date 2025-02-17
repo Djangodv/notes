@@ -25,4 +25,8 @@ rebase: it will reanchor my feature branch against the latest changes
 git fetch: update local copy of the remote repository
 >fetching and then merging a repository allows 
 
-git diff; show changes between commits, commit and working tree, etc.
+Git diff is a function that takes two input data sources and shows the changes between them. These data sources can be commits, branches, files, etc.
+
+git diff: list changes between local directory and staging area
+git diff --stat: list changes in an easier to read format
+git diff main remotes/origin/main: list changes between local and remote repository
