@@ -6,12 +6,10 @@ Github is a 'host' that hosts Git remotely.
 `ssh-keygen -t ed25519`: generate an SSH key on your computer with the ED25519 cryptographic algorithm(-t type)
 >Use the generated public key in 'SSH keys' on Github
 
-`git config -l`: list all configurations
-
+`git config -l`: list all configurations\
 `git config user.email`: list user.email in config file (email used locally)
 
-`git config --global user.email "email"`: set global email
-
+`git config --global user.email "email"`: set global email\
 `git config --global user.name "name"`: set global username 
 
 `git config --global init.defaultBranch master`: suppress warning about 'master' as the initial branch name
