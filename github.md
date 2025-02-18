@@ -24,45 +24,51 @@ The easiest way to setup a repository on Github is cloning it locally.
 
 In order to delete a git repository delete the .git.
 
-## Commits
+Forking a repository trough github creates an unlinked copy meaning it's changes will never affect the main repository.
+
+<!-- ## Commits -->
+## Updating repositories
 
 A commit is record of what changes you have made since the last time.
 
-`git add 'file'`: add specified file to staging area 
-
-`git add .`: add all files to staging area (expect deletions?)
-
+`git add 'file'`: add specified file to staging area\
+`git add .`: add all files to staging area expect deletions\
 `git add -A`: stage all changes including deletions
->The staging area stores information about what will go into your next commit
 
 `git restore`: remove staged files from staging area
 
-`git commit -m 'message'`: save staging area to local repo
+>The staging area stores information about what will go into your next commit
 
+`git commit -m 'message'`: save staging area to local repository\
 `git commit -a`: automatically stage modified or deleted files expect newly created files
 
-`git push -u origin main`: push commits to linked remote repo
+`git push origin main`: push commits to linked remote repo\
+`-u`: sets default remote branch for current local branch\
+`-f`: force push to branch
 
-`-u`: sets default remote branch for current local branch
+>Origin is a reference to the URL from the remote repository that a project was originally cloned from.
 
-`git push -f orgin 'branch name'`: force push to branch
-
-`git pull orgin 'main'`: pull changes to local repository
+`git pull origin 'main'`: pull changes to local repository
 >If git pull is used in a branch only changes from that specific branch are pulled
 
-`git status`: shows files that are out of sync
+`git fetch`: update local copy of the remote repository
+>Fetching a repository allows one to review changes before merging by using diff
 
 Merge conflicts occur when files have already been changed when pulling/pushing.
 
-## Repositories
+## Repository statistics
 
-`git log`: log of commit history
-
+`git log`: log of commit history\
 `git log --all --graph`: show commit history in graph form
 
-`git ls-files`: list all files on github repository
+`git ls-files`: list all files on github repository\
+`git status`: shows files that are out of sync
 
-Forking a repository trough github creates an unlinked copy meaning it's changes will never affect the main repository.
+Git diff is a function that takes two input data sources and shows the changes between them. These data sources can be commits, branches, files, etc.
+
+`git diff`: list changes between local directory and staging area\
+`git diff --stat`: list changes in an easier to read format\
+`git diff origin/main`: list changes between local and remote repository
 
 ## Branches
 
@@ -107,3 +113,31 @@ Create a 'config' file in the .ssh folder containing the following:
 
 `git config user.email "email"`: change email used for commits per repository
 
+## Changing commits
+
+`git commit --amend`: change message of last commit
+
+`git rebase -i HEAD~X`: modify commits with the interactive rebase tool\
+`X` is the number of commits to go back
+
+Change pick into r, reword and save the file to edit the commit message.
+
+Force push to remote repository to update the commit messages. Use `--force-with-lease` to prevent overwriting someone elses work.
+
+## Merge and rebase
+
+Git merge and git rebase are both commands used to intergrate changes from one branch into another.
+
+#### Merging
+
+![Alt text](https://www.themoderncoder.com/uploads/git-merge-graphic.png)
+
+>Git merge will keep the feature branch intact and place it onto main.
+
+#### Rebasing
+
+![Alt text](https://www.themoderncoder.com/uploads/git-rebase-graphic.png)
+
+>Git rebase will move all of the commits on your feature branch and move them on top of main.
+
+<!-- https://www.themoderncoder.com/a-better-git-workflow-with-rebase/ -->
