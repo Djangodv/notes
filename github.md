@@ -1,14 +1,13 @@
 ## Contents
-1. [Git](#git)
-2. [Github setup](#github-setup)
-3. [Repository setup](#repository-setup)
-4. [Updating repositories](#updating-repositories)
-5. [Insights](#insights)
-6. [Branches](#branches)
-7. [Multiple accounts](#multiple-accounts)
-8. [Changing commits](#changing-commits)
-9. [Merge and rebase](#merge-and-rebase)
-
+- [Git](#git)
+- [Github setup](#github-setup)
+- [Repository setup](#repository-setup)
+- [Updating repositories](#updating-repositories)
+- [Insights](#insights)
+- [Branches](#branches)
+- [Multiple accounts](#multiple-accounts)
+- [Changing commits](#changing-commits)
+- [Merge and rebase](#merge-and-rebase)
 
 ## Git
 
@@ -132,7 +131,7 @@ Create a 'config' file in the .ssh folder containing the following:
 
 `git commit --amend`: change message of last commit
 
-`git reset --soft HEAD~1`: undo last commit and preserve changes
+`git reset --soft HEAD~1`: undo last commit and preserve changes\
 `--hard`: deletes changes
 
 `git rebase -i HEAD~X`: modify commits with the interactive rebase tool\

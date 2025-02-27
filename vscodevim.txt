@@ -19,6 +19,9 @@ ctrl-/: comment lines
 
 "0p: paste text copied with 'y'
 
+"1yy: paste text into register 1
+"1dd: delete text into register 1
+
 ctrl-k o: copy current file into new window
 
 :%s/old/new/g: change all occurences of old to new
