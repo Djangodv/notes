@@ -12,3 +12,9 @@
 
 --- Horizontal rule
 ''' Code block '''
+
+![Alt text]('link'): display image
+
+<img src="link/to/image" alt="Alt Text" width="300" height="450">: display image in html
+
+[Link Text](#Title): create a link to heading in md file

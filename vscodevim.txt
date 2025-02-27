@@ -1,7 +1,35 @@
 :sh/term: open terminal
 :w 'filename': rename current file to specified filename
 
-ctrl-p: open specified files inside vscode
 ctrl-r: redo changes
 
 ctrl-shift-v: open preview of markdown files in new window
+
+ctrl-p: quickly open a file
+
+ctrl-\: open file in new window
+ctrl-1-2-3: switch focus to other window
+
+ctrl-/: comment lines
+
+:reg: to view all register types
+"": unnamed register which is used by the 'p' command
+"0: register 0 which contains text from most recent copy with 'y'
+"1: register 1 which contains text from most recent 'd' (delete) or 'c' (change)
+
+"0p: paste text copied with 'y'
+
+ctrl-k o: copy current file into new window
+
+:%s/old/new/g: change all occurences of old to new
+
+ctrl-shift-p -> configure snippets: create custom snippets for vscode
+
+q'register': record typed characters into 'register'
+@'register': execute contents of 'register'
+@@: repeat previously executed registry
+5@0: repeat register '0' 5 times
+
+Macros are stored in the same registers used by 'y' and 'p'
+
+alt-z: toggle word wrap

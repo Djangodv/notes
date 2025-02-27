@@ -1,3 +1,17 @@
+## Contents
+1. [Git](#git)
+2. [Github setup](#github-setup)
+3. [Repository setup](#repository-setup)
+4. [Updating repositories](#updating-repositories)
+5. [Insights](#insights)
+6. [Branches](#branches)
+7. [Multiple accounts](#multiple-accounts)
+8. [Changing commits](#changing-commits)
+9. [Merge and rebase](#merge-and-rebase)
+
+
+## Git
+
 A Version Control System (VSC) saves changes to a file locally or remotely (e.g. Git).
 Github is a 'host' that hosts Git remotely.
 
@@ -54,13 +68,16 @@ A commit is record of what changes you have made since the last time.
 
 Merge conflicts occur when files have already been changed when pulling/pushing.
 
-## Repository statistics
+## Insights
+<!-- ## Repository statistics -->
 
 `git log`: log of commit history\
 `git log --all --graph`: show commit history in graph form
 
 `git ls-files`: list all files on github repository\
 `git status`: shows files that are out of sync
+
+`git show "commit-hash"`: show changes in a specfic git commit
 
 Git diff is a function that takes two input data sources and shows the changes between them. These data sources can be commits, branches, files, etc.
 
@@ -114,6 +131,9 @@ Create a 'config' file in the .ssh folder containing the following:
 ## Changing commits
 
 `git commit --amend`: change message of last commit
+
+`git reset --soft HEAD~1`: undo last commit and preserve changes
+`--hard`: deletes changes
 
 `git rebase -i HEAD~X`: modify commits with the interactive rebase tool\
 `X` is the number of commits to go back
