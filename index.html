@@ -15,10 +15,23 @@
   <h1>Markdown Viewer</h1>
   <div id="content">Loading...</div>
   <script>
+    // Custom renderer to add id attributes to headers
+    const renderer = new marked.Renderer();
+    renderer.heading = function (text, level, raw, slugger) {
+      const id = slugger.slug(text);
+      return `<h${level} id="${id}">${text}</h${level}>`;
+    };
+
     fetch('github.md')
       .then(response => response.text())
       .then(text => {
-        document.getElementById('content').innerHTML = marked.parse(text);
+        document.getElementById('content').innerHTML = marked.parse(text, { renderer });
+        // Scroll to anchor if hash is present
+        if (window.location.hash) {
+          const id = window.location.hash.substring(1);
+          const el = document.getElementById(id);
+          if (el) el.scrollIntoView();
+        }
       });
   </script>
   <div class="note">
