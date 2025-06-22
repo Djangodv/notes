@@ -2,28 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My GitHub Repo Files</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>View Markdown</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; color: #222; }
     h1 { color: #1976d2; }
-    ul { background: #fff; padding: 1em; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
-    li { margin: 0.5em 0; }
-    a { color: #1976d2; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    #content { background: #fff; padding: 1em; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
     .note { color: #888; font-size: 0.95em; margin-top: 1em; }
   </style>
 </head>
 <body>
-  <h1>Files in This Repository</h1>
-  <ul>
-    <li><a href="index.html">index.html</a></li>
-    <li><a href="index.md">index.md</a></li>
-    <li><a href="github.md">github.md</a></li>
-    <!-- Add more files here as needed -->
-  </ul>
+  <h1>Markdown Viewer</h1>
+  <div id="content">Loading...</div>
+  <script>
+    fetch('github.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('content').innerHTML = marked.parse(text);
+      });
+  </script>
   <div class="note">
-    <strong>Note:</strong> This list is static. To keep it up to date, add new files manually or use a static site generator for automation.
+    <strong>Note:</strong> This viewer renders the content of <code>github.md</code> using the Marked.js library. Ensure the file is in the correct format for proper rendering.
   </div>
 </body>
 </html>
